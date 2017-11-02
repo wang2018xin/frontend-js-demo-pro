@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05 - 事件</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background: #ccc;
+    }
+</style>
+<body>
+<div id="boxId"></div>
+<button id="btn01">变长</button>
+<button id="btn02">变宽</button>
+<button id="btn03">变色</button>
+</body>
+</html>
+<script>
+    var oBox = document.getElementById('boxId');
+    var oBtn01 = document.getElementById('btn01');
+    var oBtn02 = document.getElementById('btn02');
+    var oBtn03 = document.getElementById('btn03');
+
+    oBtn01.onclick = function () {
+        oBox.style.width = '200px';
+    }
+    oBtn02.onclick = function () {
+        oBox.style.height = '200px';
+    }
+    oBtn03.onclick = function () {
+        oBox.style.background = 'pink';
+    }
+</script>

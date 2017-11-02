@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02 - 添加类</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div id="boxId"></div>
+</body>
+</html>
+<script>
+    var oBox = document.getElementById('boxId');
+    oBox.className = 'box'; // class是保留字。 这个地方改变class的时候，要使用className属性。
+</script>

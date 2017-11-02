@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06 - 常用事件捕获</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    ul {
+        width: 500px;
+        margin: 100px auto;
+    }
+
+    li {
+        height: 30px;
+        background: #ccc;
+        border: 1px solid #000;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+    }
+</style>
+<body>
+<div>
+    <ul>
+        <li id="btn01">单击</li>
+        <li id="btn02">双击</li>
+        <li id="btn03">鼠标经过</li>
+        <li id="btn04">鼠标离开</li>
+    </ul>
+</div>
+</body>
+</html>
+
+<script>
+    var oBtn01 = document.getElementById('btn01');
+    var oBtn02 = document.getElementById('btn02');
+    var oBtn03 = document.getElementById('btn03');
+    var oBtn04 = document.getElementById('btn04');
+
+    oBtn01.onclick = function () {
+        console.log('单击');
+    }
+    oBtn02.ondblclick = function () {
+        console.log('双击');
+    }
+    oBtn03.onmouseover = function () {
+        console.log('鼠标经过');
+    }
+    oBtn04.onmouseout = function () {
+        console.log('鼠标离开');
+    }
+</script>

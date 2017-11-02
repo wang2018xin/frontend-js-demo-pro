@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-二级下拉菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .box {
+            width: 100px;
+            /*background: pink;*/
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+        }
+
+        .box p {
+            background: url("day01/images/down.gif") 10px center no-repeat;
+
+        }
+
+        .box ul {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="boxId">
+    <p id="shopId">购物</p>
+    <ul id="itemId">
+        <li>水果</li>
+        <li>蔬菜</li>
+        <li>日用品</li>
+        <li>百货</li>
+    </ul>
+</div>
+</body>
+</html>
+
+<script>
+    var oBox = document.getElementById('boxId');
+    var oItem = document.getElementById('itemId');
+    var oShop = document.getElementById('shopId');
+
+    oBox.onmouseover = function () {
+        oItem.style.display = 'block';
+        oShop.style.background = 'url("images/up.gif") 10px center no-repeat';
+    }
+
+    oBox.onmouseout = function () {
+        oItem.style.display = 'none';
+        oShop.style.background = 'url("images/down.gif") 10px center no-repeat';
+    }
+</script>

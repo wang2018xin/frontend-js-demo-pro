@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07 - 显示和隐藏</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<button id="btn01">显示和隐藏</button>
+<div id="boxId"></div>
+</body>
+</html>
+
+<script>
+    var oBtn01 = document.getElementById('btn01');
+    var oBox = document.getElementById('boxId');
+
+    oBtn01.onmouseover = function () {
+        oBox.style.display = 'none';
+    }
+
+    oBtn01.onmouseout = function () {
+        oBox.style.display = 'block';
+    }
+</script>
+
